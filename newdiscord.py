@@ -1,4 +1,5 @@
 import discord
+import os
 
 client = discord.Client()
 
@@ -41,5 +42,6 @@ async def on_message(message):
     if message.content.startswith("너 어준"):
         await message.channel.send("흠.... 그것도 심하긴 한데 그나마 낫지")
 
-
-client.run("NjczNzEyOTY3MjEyMzM1MTE0.XjeCOg.z_RJC3oPfzKbsTwwyq1LBx-2OO0")
+        
+access_token = os.environ["BOT_TOKEN"]        
+client.run(access_token)
